@@ -5,66 +5,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>看見偏鄉</title>
+    <title>Document</title>
     <script src="/js/jquery-3.2.1.min.js"></script>
-    <script src="/js/popper.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/semantic.min.js"></script>
+    <script src="/js/jquery.flexslider-min.js"></script>
+    <link rel="stylesheet" href="/css/semantic.min.css">
+    <link rel="stylesheet" href="/css/flexslider.min.css">
     <link rel="stylesheet" href="/css/index.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-fix-top">
-        <div class="navbar-header container-fluid">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="#" class="navbar-brand">首頁</a>
+    <div class="ui menu">
+        <a class="item">首頁</a>
+        <a class="item">Submit</a>
+        <a class="item">st1</a>
+        <a class="item">st2</a>
+        <a class="item">st3</a>
+        <a class="item">st4</a>
+        <div class="right menu">
+            <a class="item">聯絡我們</a>
         </div>
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="#" class="active">部落介紹</a>
-                </li>
-                <li>
-                    <a href="#">部落留言板</a>
-                </li>
-                <li>
-                    <a href="#">部落之美</a>
-                </li>
-                <li>
-                    <a href="#">聯絡我們</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div style="margin-left:10%;margin-right:10%;width:80%;height:225px">
-        <img src="/images/04141_teagrove_1920x1080.jpg" class="rounded mx-auto" alt="home_img" style="width:100%;height:225px">
     </div>
-    <div style="margin-left:10%;margin-right:10%;margin-top:1em;width:80%;">
-        <ul class="nav nav-tabs nav-justified">
-            <li role="presentation">
-                <a href="#home" data-toggle="tab" style="color:#F6F6F6">Home</a>
+
+    <div class="flexslider">
+        <ul class="slides">
+            <li>
+                <img src="/images/04141_teagrove_1920x1080.jpg" alt="" style="margin-left: 10%;margin-right: 10%;width: 80%;height: 80vh;">
             </li>
-            <li role="presentation">
-                <a href="#Profile" data-toggle="tab" style="color:#F6F6F6">Profile</a>
+            <li>
+                <img src="/images/04144_winterroad_1920x1080.jpg" alt="" style="margin-left: 10%;margin-right: 10%;width: 80%;height: 80vh;">
             </li>
-            <li role="presentation">
-                <a href="#Message" data-toggle="tab" style="color:#F6F6F6">Messages</a>
+            <li>
+                <img src="/images/04145_coloradoablaze_1920x1080.jpg" alt="" style="margin-left: 10%;margin-right: 10%;width: 80%;height: 80vh;">
             </li>
         </ul>
     </div>
-    <div class="tab-content">
-        <div class="tab-pane" id="home">
-            <p>etsaeteta</p>
+
+    <div class="ui pointing menu" style="margin-left:10%;margin-right:10%;width:80%">
+        <a id="menu-all" class="active item">
+            All
+        </a>
+        <a id="menu-1" class="item">
+            Messages
+        </a>
+        <a id="menu-2" class="item">
+            Friends
+        </a>
+        <div class="right menu">
+            <div class="item">
+                <div class="ui transparent icon input">
+                </div>
+            </div>
         </div>
-        <div class="tab-pane" id="Profile">Profile</div>
-        <div class="tab-pane" id="Message">Message</div>
+    </div>
+    <div id="menu_st" class="ui segment" style="margin-left:10%;margin-right:10%;width:80%;height:40vh">
+        <p>臣亮言：先帝創業未半，而中道崩殂。今天下三分，益州 疲弊，此誠危急存亡之秋也。然侍衛之臣，不懈於內；忠志之 士，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。誠宜開 張聖聽，以光先帝遺德，恢弘志士之氣；不宜妄自菲薄，引喻 失義，以塞忠諫之路也。宮中府中，俱為一體，陟罰臧否，不
+            宜異同。若有作姦犯科，及為忠善者，宜付有司，論其刑賞， 以昭陛下平明之治，不宜篇私，使內外異法也。 　　侍中、侍郎郭攸之、費褘、董允等，此皆良實，志慮忠純 ，是以先帝簡拔以遺陛下。愚以為宮中之事，事無大小，悉以 咨之，然後施行，必能裨補闕漏，有所廣益。將軍向寵，性行
+            淑均，曉暢軍事，試用於昔日，先帝稱之曰「能」，是以眾議 舉寵為督。愚以為營中之事，悉以咨之，必能使行陣和睦，優 劣得所。親賢臣，遠小人，此先漢所以興隆也；親小人，遠賢 臣，此後漢所以傾頹也。先帝在時，每與臣論此事，未嘗不歎
+            息痛恨於桓、靈也。侍中、尚書、長史；參軍，此悉貞良死節 之臣也，願陛下親之信之，則漢室之隆，可計日而待也。 　　臣本布衣，躬耕於南陽，苟全性命於亂世，不求聞達於諸 侯。先帝不以臣卑鄙，猥自枉屈，三顧臣於草廬之中，諮臣以
+            當世之事，由是感激，遂許先帝以驅馳。後值傾覆，受任於敗 軍之際，奉命於危難之間，爾來二十有一年矣！先帝知臣謹慎 ，故臨崩寄臣以大事也。受命以來，夙夜憂勤，恐託付不效， 以傷先帝之明。故五月渡瀘，深入不毛。今南方已定，兵甲已
+            足，當獎率三軍，北定中原，庶竭駑鈍，攘除奸凶，興復漢室 ，還於舊都；此臣所以報先帝而忠陛下之職分也。至於斟酌損 益，進盡忠言，則攸之、褘、允之任也。 　 願陛下託臣以討賊興復之效；不效，則治臣之罪，以告先 帝之靈。若無興德之言，則戮允等，以彰其慢。陛下亦宜自課，
+            以諮諏善道，察納雅言，深追先帝遺詔，臣不勝受恩感激。 今當遠離，臨表涕泣，不知所云。
+        </p>
+
+        <script>
+            $("#menu-all").click(() => {
+                $("#menu-all").addClass("active");
+                $("#menu-1").removeClass("active");
+                $("#menu-2").removeClass("active");
+                $("#menu_st").text("all");
+            });
+            $("#menu-1").click(() => {
+                $("#menu-all").removeClass("active");
+                $("#menu-1").addClass("active");
+                $("#menu-2").removeClass("active");
+                $("#menu_st").text("menu1");
+            });
+            $("#menu-2").click(() => {
+                $("#menu-all").removeClass("active");
+                $("#menu-1").removeClass("active");
+                $("#menu-2").addClass("active");
+                $("#menu_st").text("menu2");
+            });
+            $(function () {
+                $(".flexslider").flexslider({
+                    slideshowSpeed: 3000, //展示時間間隔ms
+                    animationSpeed: 400, //滾動時間ms
+                    touch: true //是否支持觸屏滑動
+                });
+            });
+        </script>
     </div>
 </body>
 

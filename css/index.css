@@ -5,14 +5,22 @@ color setting
 #EE2B47
 #F6F6F6
 */
-#navbarSupportedContent {
 
-}
+#navbarSupportedContent {}
+
 body {
     background-color: #33374C;
     color: #F6F6F6;
 }
+
 h1 {
     text-align: center;
     color: tan;
+}
+
+.img_in_slide {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: 30vh;
 }
