@@ -9,13 +9,13 @@ color setting
 #navbarSupportedContent {}
 
 body {
-    background-color: #33374C;
-    color: #F6F6F6;
+    /* background-color: #33374C; */
+    /* color: #F6F6F6; */
 }
 
 h1 {
     text-align: center;
-    color: tan;
+    color: black;
 }
 
 #menu_st {
@@ -27,7 +27,7 @@ h1 {
 }
 
 #pics {
-    background-color: #33374C;
+    /* background-color: #33374C; */
     border: none;
 }
 
@@ -37,3 +37,13 @@ h1 {
     width: 80%;
     height: 30vh;
 }
+
+#map {
+    height: 100%;
+}
+
+/*html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}*/
