@@ -18,6 +18,19 @@ h1 {
     color: tan;
 }
 
+#menu_st {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: 40vh;
+    color: black;
+}
+
+#pics {
+    background-color: #33374C;
+    border: none;
+}
+
 .img_in_slide {
     margin-left: 10%;
     margin-right: 10%;
