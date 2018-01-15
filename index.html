@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="/css/semantic.min.css">
     <link rel="stylesheet" href="/css/flexslider.min.css">
     <link rel="stylesheet" href="/css/index.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEWWggQfV4lfNm-qZRmMWHZjSnPOjfbZM&libraries=places&callback=initMap"
-        async defer></script>
 </head>
 
 <body>
@@ -120,6 +118,7 @@
             </table>
         </div>
     </div>
+    <div id="map"></div>
     <div class="ui inverted vertical footer segment">
         <div class="ui container">
             <div class="ui grid">
@@ -171,7 +170,38 @@
                 touch: true //是否支持觸屏滑動
             });
         });
+        function initMap() {
+            var taiwan = {lat: 24.055171, lng: 121.102012};
+            var tribe = [
+                [ {lat:22.494224, lng: 120.624853}, '來義鄉'],
+                [ {lat:23.134923, lng: 121.176573}, '海端鄉'],
+                [ {lat:24.066786, lng: 120.953153}, '清流部落' ],
+                [ {lat:23.456862, lng: 120.747939}, '達邦村 '],
+                [ {lat:22.027964, lng: 121.541511}, '蘭嶼 '],
+                [ {lat:23.993759, lng: 120.974840}, '噶哈巫族'],
+            ];
+            var infoWindow = new google.maps.InfoWindow();
+            var map = new
+            google.maps.Map(document.getElementById('map'), {
+                zoom: 7,
+                center: taiwan
+            });
+            for( i in tribe ) {
+                marker = new google.maps.Marker({
+                    position: tribe[i][0],
+                    map: map,
+                });
+                google.maps.event.addListener(marker, 'mouseover', (function(marker, i) {
+                    return function() {
+                        infoWindow.setContent( tribe[i][1] );
+                        infoWindow.open(map, marker);
+                    }
+                })(marker, i));
+            }
+        }
     </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTqpx76khCSEl4isalGFkS0qWqZmNe1Y0&callback=initMap"></script>
+
 </body>
 
 </html>
