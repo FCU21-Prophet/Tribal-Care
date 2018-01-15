@@ -64,6 +64,8 @@
                         <i class="facebook icon"></i>
                         <i class="twitter icon"></i>
                         <i class="github icon"></i>
+                        <i class="instagram icon"></i>
+                        <i class="youtube icon"></i>
                     </div>
                 </div>
             </div>
@@ -74,11 +76,11 @@
         setInterval(() => {
             var ww = $(document).width();
             console.log(ww);
-            if(ww <= 768) {
+            if (ww <= 768) {
                 $("#row1").addClass("one column row").removeClass("three column row");
                 $("#row2").addClass("one column row").removeClass("three column row");
                 console.log("small");
-            } else if(ww > 768) {
+            } else if (ww > 768) {
                 $("#row1").addClass("three column row").remove("one column row");
                 $("#row2").addClass("three column row").remove("one column row");
                 console.log("large");
