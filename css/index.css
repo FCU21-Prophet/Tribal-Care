@@ -37,7 +37,24 @@ h1 {
 }
 
 #map {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 0;
+    margin-bottom: 1em;
+    width: 80%;
     height: 100%;
+}
+
+#map_st {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 80%;
+}
+
+#menu-bar {
+    margin-bottom: 0;
 }
 
 /*html, body {
