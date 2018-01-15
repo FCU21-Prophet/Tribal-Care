@@ -9,7 +9,7 @@ color setting
 #navbarSupportedContent {}
 
 body {
-    /* background-color: #33374C; */
+    background-color: #afb1b8;
     /* color: #F6F6F6; */
 }
 
@@ -28,6 +28,7 @@ h1 {
 
 #pics {
     /* background-color: #33374C; */
+    background-color: rgb(175, 177, 184);
     border: none;
 }
 
