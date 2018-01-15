@@ -149,6 +149,7 @@
             $("#menu-all").addClass("active");
             $("#menu-1").removeClass("active");
             $("#menu-2").removeClass("active");
+            $("#menu-3").removeClass("active");
             $.get("/menu-all.html", (data) => {
                 $("#menu_st").html(data);
             });
@@ -157,6 +158,7 @@
             $("#menu-all").removeClass("active");
             $("#menu-1").addClass("active");
             $("#menu-2").removeClass("active");
+            $("#menu-3").removeClass("active");
             $("#menu_st").text("menu1");
             $.get("/menu1.html", (data) => {
                 $("#menu_st").html(data);
@@ -166,8 +168,19 @@
             $("#menu-all").removeClass("active");
             $("#menu-1").removeClass("active");
             $("#menu-2").addClass("active");
+            $("#menu-3").removeClass("active");
             $("#menu_st").text("menu2");
             $.get("/menu2.html", (data) => {
+                $("#menu_st").html(data);
+            });
+        });
+        $("#menu-3").click(() => {
+            $("#menu-all").removeClass("active");
+            $("#menu-1").removeClass("active");
+            $("#menu-2").removeClass("active");
+            $("#menu-3").addClass("active");
+            $("#menu_st").text("menu2");
+            $.get("/menu3.html", (data) => {
                 $("#menu_st").html(data);
             });
         });
