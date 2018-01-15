@@ -26,7 +26,7 @@
     </div>
     <h1 class="ui center aligned header">部落介紹</h1>
     <div class="ui grid" style="margin-top:2em;text-align:center;">
-        <div class="three column row">
+        <div id="row1" class="three column row">
             <div class="column">
                 <img class="ui medium rounded image centered" src="/images/來義鄉排灣族/450x450.jpg">
                 <p style="font-size:2em">來義鄉排灣族</p>
@@ -40,7 +40,7 @@
                 <p style="font-size:2em">清流部落</p>
             </div>
         </div>
-        <div class="three column row">
+        <div id="row2" class="three column row">
             <div class="column">
                 <img class="ui medium rounded image centered" src="/images/達邦村鄒族/450x450.jpg">
                 <p style="font-size:2em">達邦村鄒族</p>
@@ -71,6 +71,19 @@
     </div>
 
     <script>
+        setInterval(() => {
+            var ww = $(document).width();
+            console.log(ww);
+            if(ww <= 768) {
+                $("#row1").addClass("one column row").removeClass("three column row");
+                $("#row2").addClass("one column row").removeClass("three column row");
+                console.log("small");
+            } else if(ww > 768) {
+                $("#row1").addClass("three column row").remove("one column row");
+                $("#row2").addClass("three column row").remove("one column row");
+                console.log("large");
+            }
+        }, 300);
     </script>
 </body>
 
