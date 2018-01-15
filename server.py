@@ -39,5 +39,10 @@ def menu2():
 def menu3():
     return render_template("menu3.html")
 
+@app.route("/post", methods=["POST"])
+def post():
+    dd = request.form['data']
+    return "post succeed"
+
 if __name__ == "__main__":
     app.run(debug=True)
