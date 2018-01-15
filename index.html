@@ -9,8 +9,6 @@
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="/js/semantic.min.js"></script>
     <script src="/js/jquery.flexslider-min.js"></script>
-    <script async defer src="https://api.windytv.com/v2.3/boot.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
     <link rel="stylesheet" href="/css/semantic.min.css">
     <link rel="stylesheet" href="/css/flexslider.min.css">
     <link rel="stylesheet" href="/css/index.css">
@@ -49,68 +47,78 @@
         </ul>
     </div>
 
-    <div class="ui pointing menu inverted" style="margin-left:10%;margin-right:10%;width:80%">
-        <a id="menu-all" class="active item">
-            All
-        </a>
-        <a id="menu-1" class="item">
-            留言
-        </a>
-        <a id="menu-2" class="item">
-            物資需求
-        </a>
-        <div class="right menu">
-            <div class="item">
-                <div class="ui transparent icon input">
+    <div>
+        <div class="ui pointing menu inverted" style="margin-left:10%;margin-right:10%;width:80%">
+            <a id="menu-all" class="active item">
+                All
+            </a>
+            <a id="menu-1" class="item">
+                留言
+            </a>
+            <a id="menu-2" class="item">
+                物資需求
+            </a>
+            <div class="right menu">
+                <div class="item">
+                    <div class="ui transparent icon input">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div id="menu_st" class="ui segment">
-        <table class="ui celled table">
-            <!-- <thead>
-                <tr>
-                    <th>標題</th>
-                    <th>活動</th>
-                </tr>
-            </thead> -->
-            <tbody>
-                <tr>
-                    <td>[活動]榮耀祖紋─來義鄉排灣手文展</td>
-                    <td><a target="_blank" href="http://www.tipp.org.tw/events_article.asp?F_ID=82345&PageSize=15&Page=2&startTime=&endTime=&FT_No=&NSubject_No=&SelectSubject=&Subject_No=&SubSubject_No=&TA_No=&Orderby=&KeyWords=&Order=&IsSelect=">為持續推動與保存原住民族無形資產文化，原住民... </a></td>
-                </tr>
-                <tr>
-                    <td>[活動]編染．編籃─106年度海端鄉布農技藝研習成果展</td>
-                    <td><a target="_blank" href="http://www.tipp.org.tw/events_article.asp?F_ID=82911&PageSize=15&Page=1&startTime=&endTime=&FT_No=&NSubject_No=&SelectSubject=&Subject_No=&SubSubject_No=&TA_No=&Orderby=&KeyWords=&Order=&IsSelect=">海端鄉公所為保存並延續鄉內重要布農族技藝文化... </a></td>
-                </tr>
-                <tr>
-                    <td>[遊記]南投川中島清流部落。尋找賽德克</td>
-                    <td><a target="_blank" href="http://blog.xuite.net/siba39/blog/51537807-%E5%8D%97%E6%8A%95%E5%B7%9D%E4%B8%AD%E5%B3%B6%E6%B8%85%E6%B5%81%E9%83%A8%E8%90%BD%E3%80%82%E5%B0%8B%E6%89%BE%E8%B3%BD%E5%BE%B7%E5%85%8B">昨晚去看了賽德克巴萊，因為早先知道了一些歷史背景... </a></td>
-                </tr>
-                <tr>
-                    <td>[活動]Yaku ka Kaxabu a saw 噶哈巫的復振之路</td>
-                    <td><a target="_blank" href="http://blog.xuite.net/siba39/blog/51537807-%E5%8D%97%E6%8A%95%E5%B7%9D%E4%B8%AD%E5%B3%B6%E6%B8%85%E6%B5%81%E9%83%A8%E8%90%BD%E3%80%82%E5%B0%8B%E6%89%BE%E8%B3%BD%E5%BE%B7%E5%85%8B">有一群人在百餘年前翻山越嶺來到埔里的東北隅居住...</a></td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <th colspan="2">
-                        <div class="ui right floated pagination menu">
-                            <a class="icon item">
-                                <i class="left chevron icon"></i>
-                            </a>
-                            <a class="item">1</a>
-                            <a class="item">2</a>
-                            <a class="item">3</a>
-                            <a class="item">4</a>
-                            <a class="icon item">
-                                <i class="right chevron icon"></i>
-                            </a>
-                        </div>
-                    </th>
-                </tr>
-            </tfoot>
-        </table>
+        <div id="menu_st" style="width:80%;margin-left: 10%;margin-right:10%;">
+            <table class="ui celled table" >
+                <thead>
+                    <tr style="text-align:center">
+                        <th>標題</th>
+                        <th>活動</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="width:400px">[活動]榮耀祖紋─來義鄉排灣手文展</td>
+                        <td class="center aligned">
+                            <a target="_blank" href="http://www.tipp.org.tw/events_article.asp?F_ID=82345&PageSize=15&Page=2&startTime=&endTime=&FT_No=&NSubject_No=&SelectSubject=&Subject_No=&SubSubject_No=&TA_No=&Orderby=&KeyWords=&Order=&IsSelect=">為持續推動與保存原住民族無形資產文化，原住民... </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>[活動]編染．編籃─106年度海端鄉布農技藝研習成果展</td>
+                        <td class="center aligned">
+                            <a target="_blank" href="http://www.tipp.org.tw/events_article.asp?F_ID=82911&PageSize=15&Page=1&startTime=&endTime=&FT_No=&NSubject_No=&SelectSubject=&Subject_No=&SubSubject_No=&TA_No=&Orderby=&KeyWords=&Order=&IsSelect=">海端鄉公所為保存並延續鄉內重要布農族技藝文化... </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>[遊記]南投川中島清流部落。尋找賽德克</td>
+                        <td class="center aligned">
+                            <a target="_blank" href="http://blog.xuite.net/siba39/blog/51537807-%E5%8D%97%E6%8A%95%E5%B7%9D%E4%B8%AD%E5%B3%B6%E6%B8%85%E6%B5%81%E9%83%A8%E8%90%BD%E3%80%82%E5%B0%8B%E6%89%BE%E8%B3%BD%E5%BE%B7%E5%85%8B">昨晚去看了賽德克巴萊，因為早先知道了一些歷史背景... </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>[活動]Yaku ka Kaxabu a saw 噶哈巫的復振之路</td>
+                        <td class="center aligned">
+                            <a target="_blank" href="http://blog.xuite.net/siba39/blog/51537807-%E5%8D%97%E6%8A%95%E5%B7%9D%E4%B8%AD%E5%B3%B6%E6%B8%85%E6%B5%81%E9%83%A8%E8%90%BD%E3%80%82%E5%B0%8B%E6%89%BE%E8%B3%BD%E5%BE%B7%E5%85%8B">有一群人在百餘年前翻山越嶺來到埔里的東北隅居住...</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="2">
+                            <div class="ui right floated pagination menu">
+                                <a class="icon item">
+                                    <i class="left chevron icon"></i>
+                                </a>
+                                <a class="item">1</a>
+                                <a class="item">2</a>
+                                <a class="item">3</a>
+                                <a class="item">4</a>
+                                <a class="icon item">
+                                    <i class="right chevron icon"></i>
+                                </a>
+                            </div>
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
     </div>
     <div class="ui inverted vertical footer segment">
         <div class="ui container">
@@ -127,11 +135,16 @@
         </div>
     </div>
     <script>
+        $(document).ready(() => {
+            $("menu-all").click();
+        });
         $("#menu-all").click(() => {
             $("#menu-all").addClass("active");
             $("#menu-1").removeClass("active");
             $("#menu-2").removeClass("active");
-            $("#menu_st").text("all");
+            $.get("/menu-all.html", (data) => {
+                $("#menu_st").html(data);
+            });
         });
         $("#menu-1").click(() => {
             $("#menu-all").removeClass("active");
@@ -153,7 +166,6 @@
             });
         });
     </script>
-    </div>
 </body>
 
 </html>
