@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="/js/jquery-3.2.1.min.js"></script>
-    <script src="/js/semantic.min.js"></script>
-    <script src="/js/jquery.flexslider-min.js"></script>
-    <link rel="stylesheet" href="/css/semantic.min.css">
-    <link rel="stylesheet" href="/css/flexslider.min.css">
-    <link rel="stylesheet" href="/css/index.css">
+    <script src="/static/js/jquery-3.2.1.min.js"></script>
+    <script src="/static/js/semantic.min.js"></script>
+    <script src="/static/js/jquery.flexslider-min.js"></script>
+    <link rel="stylesheet" href="/static/css/semantic.min.css">
+    <link rel="stylesheet" href="/static/css/flexslider.min.css">
+    <link rel="stylesheet" href="/static/css/index.css">
 </head>
 
 <body>
     <div class="ui menu inverted">
-        <a class="item" href="/index.html">首頁</a>
-        <a class="item" href="/about.html">部落介紹</a>
-        <a class="item" href="/need.html">部落需求</a>
-        <a class="item" href="/buy.html">部落便利店</a>
+        <a class="item" href="/">首頁</a>
+        <a class="item" href="/about">部落介紹</a>
+        <a class="item" href="/need">部落需求</a>
+        <a class="item" href="/buy">部落便利店</a>
         <div class="right menu">
             <a class="item" href="#">聯絡我們</a>
         </div>
@@ -28,19 +28,19 @@
     <div id="pics" class="flexslider">
         <ul class="slides">
             <li>
-                <img src="/images/輪播/嘉明湖.jpg" alt="" style="margin-left: 10%;margin-right: 10%;width: 80%;height: 80vh;">
+                <img src="/static/images/輪播/嘉明湖.jpg" alt="" style="margin-left: 10%;margin-right: 10%;width: 80%;height: 80vh;">
             </li>
             <li>
-                <img src="/images/輪播/活動1.jpg" alt="" style="margin-left: 10%;margin-right: 10%;width: 80%;height: 80vh;">
+                <img src="/static/images/輪播/活動1.jpg" alt="" style="margin-left: 10%;margin-right: 10%;width: 80%;height: 80vh;">
             </li>
             <li>
-                <img src="/images/輪播/活動2.jpg" alt="" style="margin-left: 10%;margin-right: 10%;width: 80%;height: 80vh;">
+                <img src="/static/images/輪播/活動2.jpg" alt="" style="margin-left: 10%;margin-right: 10%;width: 80%;height: 80vh;">
             </li>
             <li>
-                <img src="/images/輪播/清流部落.jpg" alt="" style="margin-left: 10%;margin-right: 10%;width: 80%;height: 80vh;">
+                <img src="/static/images/輪播/清流部落.jpg" alt="" style="margin-left: 10%;margin-right: 10%;width: 80%;height: 80vh;">
             </li>
             <li>
-                <img src="/images/輪播/神鷹瀑布.jpg" alt="" style="margin-left: 10%;margin-right: 10%;width: 80%;height: 80vh;">
+                <img src="/static/images/輪播/神鷹瀑布.jpg" alt="" style="margin-left: 10%;margin-right: 10%;width: 80%;height: 80vh;">
             </li>
         </ul>
     </div>
@@ -143,14 +143,14 @@
     </div>
     <script>
         $(document).ready(() => {
-            $("menu-all").click();
+            //$("menu-all").click();
         });
         $("#menu-all").click(() => {
             $("#menu-all").addClass("active");
             $("#menu-1").removeClass("active");
             $("#menu-2").removeClass("active");
             $("#menu-3").removeClass("active");
-            $.get("/menu-all.html", (data) => {
+            $.get("/menuall", (data) => {
                 $("#menu_st").html(data);
             });
         });
@@ -160,7 +160,7 @@
             $("#menu-2").removeClass("active");
             $("#menu-3").removeClass("active");
             $("#menu_st").text("menu1");
-            $.get("/menu1.html", (data) => {
+            $.get("/menu1", (data) => {
                 $("#menu_st").html(data);
             });
         });
@@ -170,7 +170,7 @@
             $("#menu-2").addClass("active");
             $("#menu-3").removeClass("active");
             $("#menu_st").text("menu2");
-            $.get("/menu2.html", (data) => {
+            $.get("/menu2", (data) => {
                 $("#menu_st").html(data);
             });
         });
@@ -180,7 +180,7 @@
             $("#menu-2").removeClass("active");
             $("#menu-3").addClass("active");
             $("#menu_st").text("menu2");
-            $.get("/menu3.html", (data) => {
+            $.get("/menu3", (data) => {
                 $("#menu_st").html(data);
             });
         });
