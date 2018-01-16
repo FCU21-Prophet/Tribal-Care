@@ -238,7 +238,7 @@
             <div class="right floated two wide column">
                 <div class="ui inverted menu" style="margin-bottom:0">
                     <a class="header item" href="" style="width:100%">
-                        <i class="shop icon"></i>總金額
+                        <i class="money icon"></i>總金額
                     </a>
                 </div>
                 <div class="ui segment" style="margin-top:0">
@@ -246,6 +246,13 @@
                         <span id="num" value=0>0</span>
                     </p>
                     <button class="ui fluid button">結帳</button>
+                </div>
+                <div class="ui inverted menu" style="margin-bottom:0">
+                    <a href="" class="header item" style="width:100%;text-aligned:ceter;">
+                        <i class="shop icon"></i>購物車清單
+                    </a>
+                </div>
+                <div id="buy_item" class="ui segment" style="margin-top:0">
                 </div>
             </div>
         </div>
@@ -270,79 +277,79 @@
         $("#m1").click(() => {
             var nu = parseInt($("#in1").text());
             if (nu > 1) {
-                $("#in1").text((nu-1).toString());
+                $("#in1").text((nu - 1).toString());
             } else {
                 alert("數字不可小於1!!")
             }
         });
         $("#p1").click(() => {
             var nu = parseInt($("#in1").text());
-            $("#in1").text((nu+1).toString());
+            $("#in1").text((nu + 1).toString());
         });
 
         $("#m2").click(() => {
             var nu = parseInt($("#in2").text());
             if (nu > 1) {
-                $("#in2").text((nu-1).toString());
+                $("#in2").text((nu - 1).toString());
             } else {
                 alert("數字不可小於1!!")
             }
         });
         $("#p2").click(() => {
             var nu = parseInt($("#in2").text());
-            $("#in2").text((nu+1).toString());
+            $("#in2").text((nu + 1).toString());
         });
 
         $("#m3").click(() => {
             var nu = parseInt($("#in3").text());
             if (nu > 1) {
-                $("#in3").text((nu-1).toString());
+                $("#in3").text((nu - 1).toString());
             } else {
                 alert("數字不可小於1!!")
             }
         });
         $("#p3").click(() => {
             var nu = parseInt($("#in3").text());
-            $("#in3").text((nu+1).toString());
+            $("#in3").text((nu + 1).toString());
         });
 
         $("#m4").click(() => {
             var nu = parseInt($("#in4").text());
             if (nu > 1) {
-                $("#in4").text((nu-1).toString());
+                $("#in4").text((nu - 1).toString());
             } else {
                 alert("數字不可小於1!!")
             }
         });
         $("#p4").click(() => {
             var nu = parseInt($("#in4").text());
-            $("#in4").text((nu+1).toString());
+            $("#in4").text((nu + 1).toString());
         });
 
         $("#m5").click(() => {
             var nu = parseInt($("#in5").text());
             if (nu > 1) {
-                $("#in5").text((nu-1).toString());
+                $("#in5").text((nu - 1).toString());
             } else {
                 alert("數字不可小於1!!")
             }
         });
         $("#p5").click(() => {
             var nu = parseInt($("#in5").text());
-            $("#in5").text((nu+1).toString());
+            $("#in5").text((nu + 1).toString());
         });
 
         $("#m6").click(() => {
             var nu = parseInt($("#in6").text());
             if (nu > 1) {
-                $("#in6").text((nu-1).toString());
+                $("#in6").text((nu - 1).toString());
             } else {
                 alert("數字不可小於1!!")
             }
         });
         $("#p6").click(() => {
             var nu = parseInt($("#in6").text());
-            $("#in6").text((nu+1).toString());
+            $("#in6").text((nu + 1).toString());
         });
 
         $("#b1").click(() => {
@@ -350,6 +357,16 @@
             var total_num = parseInt($("#num").text());
             var out = total_num + 2800 * nu;
             $("#num").text(out);
+            if($("#it1").length > 0){
+                var it_nu = parseInt($("#it_nu1").text());
+                $("#it_nu1").text((it_nu + nu).toString())
+            } else {
+                $("#buy_item").append("<p id='it1'>山豬牙<span id='it_nu1'>"+nu+"</span>個<i id='r1' class='remove icon' style='float:right'></i></p>")
+                $("#r1").click(() => {
+                    $("#it1").remove();
+                });
+            }
+            $("#in1").text("1");
         });
 
         $("#b2").click(() => {
@@ -357,34 +374,84 @@
             var total_num = parseInt($("#num").text());
             var out = total_num + 290 * nu;
             $("#num").text(out);
+            if($("#it2").length > 0){
+                var it_nu = parseInt($("#it_nu2").text());
+                $("#it_nu2").text((it_nu + nu).toString())
+            } else {
+                $("#buy_item").append("<p id='it2'>鵝卵石鑰匙圈<span id='it_nu2'>"+nu+"</span>個<i id='r2' class='remove icon' style='float:right'></i></p>")
+                $("#r2").click(() => {
+                    $("#it2").remove();
+                });
+            }
+            $("#in2").text("1");
         });
-         
+
         $("#b3").click(() => {
             var nu = parseInt($("#in3").text());
             var total_num = parseInt($("#num").text());
             var out = total_num + 200 * nu;
             $("#num").text(out);
+            if($("#it3").length > 0){
+                var it_nu = parseInt($("#it_nu3").text());
+                $("#it_nu3").text((it_nu + nu).toString())
+            } else {
+                $("#buy_item").append("<p id='it3'>湯筷組<span id='it_nu3'>"+nu+"</span>組<i id='r3' class='remove icon' style='float:right'></i></p>")
+                $("#r3").click(() => {
+                    $("#it3").remove();
+                });
+            }
+            $("#in3").text("1");
         });
+
         $("#b4").click(() => {
             var nu = parseInt($("#in4").text());
             var total_num = parseInt($("#num").text());
             var out = total_num + 1200 * nu;
             $("#num").text(out);
+            if($("#it4").length > 0){
+                var it_nu = parseInt($("#it_nu4").text());
+                $("#it_nu4").text((it_nu + nu).toString())
+            } else {
+                $("#buy_item").append("<p id='it4'>馬克杯組(四只)<span id='it_nu4'>"+nu+"</span>組<i id='r4' class='remove icon' style='float:right'></i></p>")
+                $("#r4").click(() => {
+                    $("#it4").remove();
+                });
+            }
+            $("#in4").text("1");
         });
 
         $("#b5").click(() => {
             var nu = parseInt($("#in5").text());
             var total_num = parseInt($("#num").text());
             var out = total_num + 180 * nu;
-            console.log(out);
             $("#num").text(out);
+            if($("#it5").length > 0){
+                var it_nu = parseInt($("#it_nu5").text());
+                $("#it_nu5").text((it_nu + nu).toString())
+            } else {
+                $("#buy_item").append("<p id='it5'>鳳凰米-一公斤<span id='it_nu5'>"+nu+"</span>包<i id='r5' class='remove icon' style='float:right'></i></p>")
+                $("#r5").click(() => {
+                    $("#it5").remove();
+                });
+            }
+            $("#in5").text("1");
         });
-         
+
         $("#b6").click(() => {
             var nu = parseInt($("#in6").text());
             var total_num = parseInt($("#num").text());
             var out = total_num + 81000 * nu;
             $("#num").text(out);
+            if($("#it6").length > 0){
+                var it_nu = parseInt($("#it_nu6").text());
+                $("#it_nu6").text((it_nu + nu).toString())
+            } else {
+                $("#buy_item").append("<p id='it6'>山豬<span id='it_nu6'>"+nu+"</span>隻<i id='r6' class='remove icon' style='float:right'></i></p>")
+                $("#r6").click(() => {
+                    $("#it6").remove();
+                });
+            }
+            $("#in6").text("1");
         });
     </script>
 </body>
