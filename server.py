@@ -30,7 +30,11 @@ def post():
 
 @app.route("/message")
 def message():
-    return render_template("message.html")
+    f = open(cwd + "/static/json/message.json")
+    json_data = f.read()
+    print(json_data)
+    f.close()
+    return render_template("message.html", json_data=json_data)
 
 if __name__ == "__main__":
     app.run(debug=True)
