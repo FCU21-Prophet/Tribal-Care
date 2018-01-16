@@ -21,7 +21,7 @@
         <a class="item" href="/need">部落需求</a>
         <a class="item" href="/buy">部落便利店</a>
         <div class="right menu">
-            <a class="item" href="#">聯絡我們</a>
+            <a id="me" class="item" href="#">聯絡我們</a>
         </div>
     </div>
     <h1 class="ui center aligned header">偏鄉部落關懷資訊站</h1>
@@ -200,6 +200,10 @@
                 })(marker, i));
             }
         }
+
+        $("#me").click(() => {
+            alert("才不告訴膩勒");
+        });
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTqpx76khCSEl4isalGFkS0qWqZmNe1Y0&callback=initMap"></script>
 

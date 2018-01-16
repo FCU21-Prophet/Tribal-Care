@@ -19,7 +19,7 @@
         <a class="item" href="/need">部落需求</a>
         <a class="item" href="/buy">部落便利店</a>
         <div class="right menu">
-            <a class="item" href="#">聯絡我們</a>
+            <a id="me" class="item" href="#">聯絡我們</a>
         </div>
     </div>
     <h1 class="ui center aligned header" style="margin-top:3em">部落需求</h1>
@@ -140,7 +140,11 @@
             </div>
         </div>
     </div>
-
+    <script>
+        $("#me").click(() => {
+            alert("才不告訴膩勒");
+        });
+    </script>
 </body>
 
 </html>
