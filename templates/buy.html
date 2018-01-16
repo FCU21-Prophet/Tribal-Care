@@ -245,7 +245,7 @@
                     <p style="font-size:24px">$
                         <span id="num" value=0>0</span>
                     </p>
-                    <button class="ui fluid button">結帳</button>
+                    <button id="buy_cart" class="ui fluid button">結帳</button>
                 </div>
                 <div class="ui inverted menu" style="margin-bottom:0">
                     <a href="" class="header item" style="width:100%;text-aligned:ceter;">
@@ -470,6 +470,10 @@
                 });
             }
             $("#in6").text("1");
+        });
+
+        $("#buy_cart").click(() => {
+            alert("感謝購買!!");
         });
     </script>
 </body>
