@@ -363,6 +363,9 @@
             } else {
                 $("#buy_item").append("<p id='it1'>山豬牙<span id='it_nu1'>"+nu+"</span>個<i id='r1' class='remove icon' style='float:right'></i></p>")
                 $("#r1").click(() => {
+                    var minus_price = parseInt($("#it_nu1").text()) * 2800;
+                    var out_price = parseInt($("#num").text()) - minus_price;
+                    $("#num").text(out_price);
                     $("#it1").remove();
                 });
             }
@@ -380,6 +383,9 @@
             } else {
                 $("#buy_item").append("<p id='it2'>鵝卵石鑰匙圈<span id='it_nu2'>"+nu+"</span>個<i id='r2' class='remove icon' style='float:right'></i></p>")
                 $("#r2").click(() => {
+                    var minus_price = parseInt($("#it_nu2").text()) * 290
+                    var out_price = parseInt($("#num").text()) - minus_price;
+                    $("#num").text(out_price);
                     $("#it2").remove();
                 });
             }
@@ -397,6 +403,9 @@
             } else {
                 $("#buy_item").append("<p id='it3'>湯筷組<span id='it_nu3'>"+nu+"</span>組<i id='r3' class='remove icon' style='float:right'></i></p>")
                 $("#r3").click(() => {
+                    var minus_price = parseInt($("#it_nu3").text()) * 200;
+                    var out_price = parseInt($("#num").text()) - minus_price;
+                    $("#num").text(out_price);
                     $("#it3").remove();
                 });
             }
@@ -414,6 +423,9 @@
             } else {
                 $("#buy_item").append("<p id='it4'>馬克杯組(四只)<span id='it_nu4'>"+nu+"</span>組<i id='r4' class='remove icon' style='float:right'></i></p>")
                 $("#r4").click(() => {
+                    var minus_price = parseInt($("#it_nu4").text()) * 1200;
+                    var out_price = parseInt($("#num").text()) - minus_price;
+                    $("#num").text(out_price);
                     $("#it4").remove();
                 });
             }
@@ -431,6 +443,9 @@
             } else {
                 $("#buy_item").append("<p id='it5'>鳳凰米-一公斤<span id='it_nu5'>"+nu+"</span>包<i id='r5' class='remove icon' style='float:right'></i></p>")
                 $("#r5").click(() => {
+                    var minus_price = parseInt($("#it_nu5").text()) * 180;
+                    var out_price = parseInt($("#num").text()) - minus_price;
+                    $("#num").text(out_price);
                     $("#it5").remove();
                 });
             }
@@ -448,6 +463,9 @@
             } else {
                 $("#buy_item").append("<p id='it6'>山豬<span id='it_nu6'>"+nu+"</span>隻<i id='r6' class='remove icon' style='float:right'></i></p>")
                 $("#r6").click(() => {
+                    var minus_price = parseInt($("#it_nu6").text()) * 81000;
+                    var out_price = parseInt($("#num").text()) - minus_price;
+                    $("#num").text(out_price);
                     $("#it6").remove();
                 });
             }
