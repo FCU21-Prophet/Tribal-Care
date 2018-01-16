@@ -27,7 +27,10 @@
         <div class="row">
             <div class="left floated two wide column"></div>
             <div id="main" class="tweleven wide column">
-                <div id="seg" class="ui segment">
+                <div class="ui menu inverted" style="margin-bottom:0;">
+                    <a href="" class="item fluid">商品目錄</a>
+                </div>
+                <div id="seg" class="ui segment" style="margin-top:0;">
                     <div class="ui equal width grid">
                         <div class="column">
                             <div class="ui centered card">
@@ -56,7 +59,7 @@
                                             </div>
                                         </div>
                                         <div class="column">
-                                            <button class="ui button">購買</button>
+                                            <button id="b1" class="ui button">購買</button>
                                         </div>
                                     </div>
                                 </div>
@@ -89,7 +92,7 @@
                                             </div>
                                         </div>
                                         <div class="column">
-                                            <button class="ui button">購買</button>
+                                            <button id="b2" class="ui button">購買</button>
                                         </div>
                                     </div>
                                 </div>
@@ -122,7 +125,7 @@
                                             </div>
                                         </div>
                                         <div class="column">
-                                            <button class="ui button">購買</button>
+                                            <button id="b3" class="ui button">購買</button>
                                         </div>
                                     </div>
                                 </div>
@@ -156,7 +159,7 @@
                                                 </div>
                                             </div>
                                             <div class="column">
-                                                <button class="ui button">購買</button>
+                                                <button id="b4" class="ui button">購買</button>
                                             </div>
                                         </div>
                                     </div>
@@ -189,7 +192,7 @@
                                                 </div>
                                             </div>
                                             <div class="column">
-                                                <button class="ui button">購買</button>
+                                                <button id="b5" class="ui button">購買</button>
                                             </div>
                                         </div>
                                     </div>
@@ -201,7 +204,7 @@
                                         <img src="/static/images/buy/pig.png">
                                     </div>
                                     <div class="content">
-                                        <a class="header">山豬</a>
+                                        <a class="header">山豬(公道價)</a>
                                         <div class="description">
                                             $81000 / 隻
                                         </div>
@@ -222,7 +225,7 @@
                                                 </div>
                                             </div>
                                             <div class="column">
-                                                <button class="ui button">購買</button>
+                                                <button id="b6" class="ui button">購買</button>
                                             </div>
                                         </div>
                                     </div>
@@ -264,16 +267,6 @@
         </div>
     </div>
     <script>
-        /*$(document).ready(() => {
-                                            $.get({
-                                                url: "/static/template/buy_card.html",
-                                                cache: false
-                                            }, (data) => {
-                                                $("#seg").empty();
-                                                $("#seg").html(data);
-                                            });
-                                        });*/
-
         $("#m1").click(() => {
             var nu = parseInt($("#in1").text());
             if (nu > 1) {
@@ -350,6 +343,48 @@
         $("#p6").click(() => {
             var nu = parseInt($("#in6").text());
             $("#in6").text((nu+1).toString());
+        });
+
+        $("#b1").click(() => {
+            var nu = parseInt($("#in1").text());
+            var total_num = parseInt($("#num").text());
+            var out = total_num + 2800 * nu;
+            $("#num").text(out);
+        });
+
+        $("#b2").click(() => {
+            var nu = parseInt($("#in2").text());
+            var total_num = parseInt($("#num").text());
+            var out = total_num + 290 * nu;
+            $("#num").text(out);
+        });
+         
+        $("#b3").click(() => {
+            var nu = parseInt($("#in3").text());
+            var total_num = parseInt($("#num").text());
+            var out = total_num + 200 * nu;
+            $("#num").text(out);
+        });
+        $("#b4").click(() => {
+            var nu = parseInt($("#in4").text());
+            var total_num = parseInt($("#num").text());
+            var out = total_num + 1200 * nu;
+            $("#num").text(out);
+        });
+
+        $("#b5").click(() => {
+            var nu = parseInt($("#in5").text());
+            var total_num = parseInt($("#num").text());
+            var out = total_num + 180 * nu;
+            console.log(out);
+            $("#num").text(out);
+        });
+         
+        $("#b6").click(() => {
+            var nu = parseInt($("#in6").text());
+            var total_num = parseInt($("#num").text());
+            var out = total_num + 81000 * nu;
+            $("#num").text(out);
         });
     </script>
 </body>
