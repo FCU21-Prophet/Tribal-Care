@@ -42,6 +42,7 @@
                                     <div class="description">
                                         $2800 / 個
                                     </div>
+                                    <div class="ui star rating" data-rating="3" data-max-rating="5" style="margin-top:10px"></div>
                                 </div>
                                 <div class="extra content">
                                     <div class="ui two column grid">
@@ -75,6 +76,7 @@
                                     <div class="description">
                                         $290 / 個
                                     </div>
+                                    <div class="ui star rating" data-rating="1" data-max-rating="5" style="margin-top:10px"></div>
                                 </div>
                                 <div class="extra content">
                                     <div class="ui two column grid">
@@ -108,6 +110,7 @@
                                     <div class="description">
                                         $200 / 組
                                     </div>
+                                    <div class="ui star rating" data-rating="2" data-max-rating="5" style="margin-top:10px"></div>
                                 </div>
                                 <div class="extra content">
                                     <div class="ui two column grid">
@@ -142,6 +145,7 @@
                                         <div class="description">
                                             $1200 / 組
                                         </div>
+                                        <div class="ui star rating" data-rating="2" data-max-rating="5" style="margin-top:10px"></div>
                                     </div>
                                     <div class="extra content">
                                         <div class="ui two column grid">
@@ -175,6 +179,7 @@
                                         <div class="description">
                                             $180 / 包
                                         </div>
+                                        <div class="ui star rating" data-rating="4" data-max-rating="5" style="margin-top:10px"></div>
                                     </div>
                                     <div class="extra content">
                                         <div class="ui two column grid">
@@ -208,6 +213,7 @@
                                         <div class="description">
                                             $81000 / 隻
                                         </div>
+                                        <div class="ui star rating" data-rating="5" data-max-rating="5" style="margin-top:10px"></div>
                                     </div>
                                     <div class="extra content">
                                         <div class="ui two column grid">
@@ -248,7 +254,7 @@
                     <button id="buy_cart" class="ui fluid button">結帳</button>
                 </div>
                 <div class="ui inverted menu" style="margin-bottom:0">
-                    <a href="" class="header item" style="width:100%;text-aligned:ceter;">
+                    <a href="" class="header item" style="width:100%;">
                         <i class="shop icon"></i>購物車清單
                     </a>
                 </div>
@@ -274,6 +280,9 @@
         </div>
     </div>
     <script>
+        $(document).ready(() => {
+            $(".rating").rating();
+        });
         $("#m1").click(() => {
             var nu = parseInt($("#in1").text());
             if (nu > 1) {
@@ -357,11 +366,12 @@
             var total_num = parseInt($("#num").text());
             var out = total_num + 2800 * nu;
             $("#num").text(out);
-            if($("#it1").length > 0){
+            if ($("#it1").length > 0) {
                 var it_nu = parseInt($("#it_nu1").text());
                 $("#it_nu1").text((it_nu + nu).toString())
             } else {
-                $("#buy_item").append("<p id='it1'>山豬牙<span id='it_nu1'>"+nu+"</span>個<i id='r1' class='remove icon' style='float:right'></i></p>")
+                $("#buy_item").append("<p id='it1'>山豬牙<span id='it_nu1'>" + nu +
+                    "</span>個<i id='r1' class='remove icon' style='float:right'></i></p>")
                 $("#r1").click(() => {
                     var minus_price = parseInt($("#it_nu1").text()) * 2800;
                     var out_price = parseInt($("#num").text()) - minus_price;
@@ -377,11 +387,12 @@
             var total_num = parseInt($("#num").text());
             var out = total_num + 290 * nu;
             $("#num").text(out);
-            if($("#it2").length > 0){
+            if ($("#it2").length > 0) {
                 var it_nu = parseInt($("#it_nu2").text());
                 $("#it_nu2").text((it_nu + nu).toString())
             } else {
-                $("#buy_item").append("<p id='it2'>鵝卵石鑰匙圈<span id='it_nu2'>"+nu+"</span>個<i id='r2' class='remove icon' style='float:right'></i></p>")
+                $("#buy_item").append("<p id='it2'>鵝卵石鑰匙圈<span id='it_nu2'>" + nu +
+                    "</span>個<i id='r2' class='remove icon' style='float:right'></i></p>")
                 $("#r2").click(() => {
                     var minus_price = parseInt($("#it_nu2").text()) * 290
                     var out_price = parseInt($("#num").text()) - minus_price;
@@ -397,11 +408,12 @@
             var total_num = parseInt($("#num").text());
             var out = total_num + 200 * nu;
             $("#num").text(out);
-            if($("#it3").length > 0){
+            if ($("#it3").length > 0) {
                 var it_nu = parseInt($("#it_nu3").text());
                 $("#it_nu3").text((it_nu + nu).toString())
             } else {
-                $("#buy_item").append("<p id='it3'>湯筷組<span id='it_nu3'>"+nu+"</span>組<i id='r3' class='remove icon' style='float:right'></i></p>")
+                $("#buy_item").append("<p id='it3'>湯筷組<span id='it_nu3'>" + nu +
+                    "</span>組<i id='r3' class='remove icon' style='float:right'></i></p>")
                 $("#r3").click(() => {
                     var minus_price = parseInt($("#it_nu3").text()) * 200;
                     var out_price = parseInt($("#num").text()) - minus_price;
@@ -417,11 +429,12 @@
             var total_num = parseInt($("#num").text());
             var out = total_num + 1200 * nu;
             $("#num").text(out);
-            if($("#it4").length > 0){
+            if ($("#it4").length > 0) {
                 var it_nu = parseInt($("#it_nu4").text());
                 $("#it_nu4").text((it_nu + nu).toString())
             } else {
-                $("#buy_item").append("<p id='it4'>馬克杯組(四只)<span id='it_nu4'>"+nu+"</span>組<i id='r4' class='remove icon' style='float:right'></i></p>")
+                $("#buy_item").append("<p id='it4'>馬克杯組(四只)<span id='it_nu4'>" + nu +
+                    "</span>組<i id='r4' class='remove icon' style='float:right'></i></p>")
                 $("#r4").click(() => {
                     var minus_price = parseInt($("#it_nu4").text()) * 1200;
                     var out_price = parseInt($("#num").text()) - minus_price;
@@ -437,11 +450,12 @@
             var total_num = parseInt($("#num").text());
             var out = total_num + 180 * nu;
             $("#num").text(out);
-            if($("#it5").length > 0){
+            if ($("#it5").length > 0) {
                 var it_nu = parseInt($("#it_nu5").text());
                 $("#it_nu5").text((it_nu + nu).toString())
             } else {
-                $("#buy_item").append("<p id='it5'>鳳凰米-一公斤<span id='it_nu5'>"+nu+"</span>包<i id='r5' class='remove icon' style='float:right'></i></p>")
+                $("#buy_item").append("<p id='it5'>鳳凰米-一公斤<span id='it_nu5'>" + nu +
+                    "</span>包<i id='r5' class='remove icon' style='float:right'></i></p>")
                 $("#r5").click(() => {
                     var minus_price = parseInt($("#it_nu5").text()) * 180;
                     var out_price = parseInt($("#num").text()) - minus_price;
@@ -457,11 +471,12 @@
             var total_num = parseInt($("#num").text());
             var out = total_num + 81000 * nu;
             $("#num").text(out);
-            if($("#it6").length > 0){
+            if ($("#it6").length > 0) {
                 var it_nu = parseInt($("#it_nu6").text());
                 $("#it_nu6").text((it_nu + nu).toString())
             } else {
-                $("#buy_item").append("<p id='it6'>山豬<span id='it_nu6'>"+nu+"</span>隻<i id='r6' class='remove icon' style='float:right'></i></p>")
+                $("#buy_item").append("<p id='it6'>山豬<span id='it_nu6'>" + nu +
+                    "</span>隻<i id='r6' class='remove icon' style='float:right'></i></p>")
                 $("#r6").click(() => {
                     var minus_price = parseInt($("#it_nu6").text()) * 81000;
                     var out_price = parseInt($("#num").text()) - minus_price;
