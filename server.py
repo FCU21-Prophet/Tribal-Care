@@ -23,18 +23,18 @@ def buy():
 def need():
     return render_template("need.html")
 
-@app.route("/post", methods=["POST"])
-def post():
-    dd = request.form['data']
-    return "post succeed"
+# @app.route("/post", methods=["POST"])
+# def post():
+#     dd = request.form['data']
+#     return "post succeed"
 
-@app.route("/message")
-def message():
-    f = open(cwd + "/static/json/message.json")
-    json_data = f.read()
-    print(json_data)
-    f.close()
-    return render_template("message.html", json_data=json_data)
+# @app.route("/message")
+# def message():
+#     f = open(cwd + "/static/json/message.json")
+#     json_data = f.read()
+#     print(json_data)
+#     f.close()
+#     return render_template("message.html", json_data=json_data)
 
 if __name__ == "__main__":
     app.run(debug=True)
