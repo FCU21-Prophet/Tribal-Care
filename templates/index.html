@@ -150,7 +150,7 @@
             $("#menu-1").removeClass("active");
             $("#menu-2").removeClass("active");
             $("#menu-3").removeClass("active");
-            $.get("/menuall", (data) => {
+            $.get("/static/template/menuall.html", (data) => {
                 $("#menu_st").html(data);
             });
         });
@@ -160,7 +160,7 @@
             $("#menu-2").removeClass("active");
             $("#menu-3").removeClass("active");
             $("#menu_st").text("menu1");
-            $.get("/menu1", (data) => {
+            $.get("/static/template/menu1.html", (data) => {
                 $("#menu_st").html(data);
             });
         });
@@ -170,7 +170,7 @@
             $("#menu-2").addClass("active");
             $("#menu-3").removeClass("active");
             $("#menu_st").text("menu2");
-            $.get("/menu2", (data) => {
+            $.get("/static/template/menu2.html", (data) => {
                 $("#menu_st").html(data);
             });
         });
@@ -180,7 +180,7 @@
             $("#menu-2").removeClass("active");
             $("#menu-3").addClass("active");
             $("#menu_st").text("menu2");
-            $.get("/menu3", (data) => {
+            $.get("/static/template/menu3.html", (data) => {
                 $("#menu_st").html(data);
             });
         });
